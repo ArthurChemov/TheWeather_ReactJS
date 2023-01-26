@@ -1,0 +1,82 @@
+@import "../../scss/custom.scss";
+
+header{
+  .title{
+    position: relative;
+    padding-bottom: 40px;
+
+    h2{
+      position: absolute;
+    }
+
+    h2:nth-child(1){
+      color: transparent;
+      -webkit-text-stroke: 0.5px #03a9f4;
+    }
+
+    h2:nth-child(2){
+      color: #03a9f4;
+      animation: animate 4s ease-in-out infinite;
+    }
+
+    .bi{
+        left: 130px;
+        color: yellow;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding-bottom: 30px;
+        .bi{
+            left: 115px;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        .bi{
+            left: 105px;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .bi{
+            visibility: hidden;
+        }
+    }
+
+    @keyframes animate {
+        0%{
+            clip-path: polygon(0% 46%, 16% 45%, 34% 50%, 51% 62%, 67% 66%, 84% 65%, 100% 60%, 100% 100%, 0% 100%);
+        }
+        100%{
+            clip-path: polygon(0% 46%, 16% 45%, 34% 50%, 51% 62%, 67% 66%, 84% 65%, 100% 60%, 100% 100%, 0% 100%);
+        }
+        50%{
+            clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+form{
+  justify-content: center;
+
+  input{
+    border-radius: $border-radius-lg;
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: end;
+  }
+}
+
+.mode{
+  button{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .bi{
+    color: yellow;
+  }
+}
+
+}
