@@ -1,13 +1,10 @@
-import { useState } from "react";
 import "./Navbar.scss"
 
-function Navbar() {
-  const[mode, isDark] = useState(true);
+const Navbar = ({mode, isDark}) => {
   const setLight = () => isDark(!mode);
 
   return(
-    // style={` ${isLight ? 'background-color: theme-color("light");':'background-color: theme-color("dark");'}`}
-    <div className="navbar bg-gradient">
+    <div className="navbar bg-gradient" style={mode ? { backgroundColor: '#212529'  } : {backgroundColor: '#6c757d'}}>
       <header className="container text-white d-flex justify-content-between">
         <div className="title">
           <h2>Weather</h2>
