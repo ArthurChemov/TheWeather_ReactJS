@@ -45,9 +45,6 @@ const Navbar = ({mode, isDark, onSearchChange}) => {
           onChange={handleOnChange}
           loadOptions={loadOptions}
         />
-        {/* <form className="d-flex align-items-center w-50" autoComplete="off">
-          <input type="search" className="form-control ds-input w-75" id="search-input" placeholder="Search..." aria-label="Search..." value={search} loadOptions={loadOptions} onChange={handleOnChange}/>
-        </form> */}
         <h2 className="mode">
           <button type="button" className={`bi ${mode ? 'bi-brightness-high-fill':'bi-moon-stars-fill'}`} onClick={setLight}></button>
         </h2>
