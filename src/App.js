@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router-dom';
 import { useState } from "react";
+import Media from 'react-media';
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./components/utilities/api";
 import CurrentWeather from "./components/current-weather/CurrentWeather";
 import Forecast from "./components/forecast/Forecast";
@@ -34,16 +34,26 @@ function App() {
   };
 
   return (
-    <div className={`app ${mode ? 'bg-gradient':'bg-gradient'}`} style={mode ? { backgroundColor: '#212529'  } : {backgroundColor: '#ced4da'}}>
-      <BrowserRouter>
-        <Navbar mode = {mode} isDark = {isDark}/>
-        <Search mode = {mode} isDark = {isDark} onSearchChange={handleOnSearchChange}/>
-        <div className='d-flex flex-row full-weather'>
-          {currentWeather && <CurrentWeather data={currentWeather} />}
-          {forecast && <Forecast data={forecast} />}
-        </div>
-      </BrowserRouter>
-    </div>
+    <section className={`app ${mode ? 'bg-gradient':'bg-gradient'}`} style={mode ? { backgroundColor: '#212529'  } : {backgroundColor: '#ced4da'}}>
+      <Navbar mode = {mode} isDark = {isDark}/>
+      <Search mode = {mode} isDark = {isDark} onSearchChange={handleOnSearchChange}/>
+      <Media query="screen and (max-width: 900px)" render={() =>
+          (
+            <div className='d-flex flex-column full-weather'>
+              {currentWeather && <CurrentWeather data={currentWeather} />}
+              {forecast && <Forecast data={forecast} />}
+            </div>
+          )}
+        />
+      <Media query="screen and (min-width: 900px)" render={() =>
+          (
+            <div className='d-flex flex-row full-weather'>
+              {currentWeather && <CurrentWeather data={currentWeather} />}
+              {forecast && <Forecast data={forecast} />}
+            </div>
+          )}
+        />
+    </section>
   );
 }
 
