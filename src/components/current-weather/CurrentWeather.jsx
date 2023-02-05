@@ -35,11 +35,11 @@ const CurrentWeather = ({ data }) => {
               </span>
             </div>
             <div className="parameter-row">
-              <i class="bi bi-wind"></i>
+              <i className="bi bi-wind"></i>
               <span className="parameter-value">{data.wind.speed} m/s</span>
             </div>
             <div className="parameter-row">
-              <i class="bi bi-droplet"></i>
+              <i className="bi bi-droplet"></i>
               <span className="parameter-value">{data.main.humidity}%</span>
             </div>
             <div className="parameter-row">

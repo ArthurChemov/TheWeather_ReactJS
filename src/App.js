@@ -38,7 +38,7 @@ function App() {
       <BrowserRouter>
         <Navbar mode = {mode} isDark = {isDark}/>
         <Search mode = {mode} isDark = {isDark} onSearchChange={handleOnSearchChange}/>
-        <div className='d-flex full-weather'>
+        <div className='d-flex flex-row full-weather'>
           {currentWeather && <CurrentWeather data={currentWeather} />}
           {forecast && <Forecast data={forecast} />}
         </div>
