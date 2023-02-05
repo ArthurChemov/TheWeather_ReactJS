@@ -1,41 +1,54 @@
-.title {
-    font-size: 23px;
-    font-weight: 700;
+@import "../../scss/custom.scss";
+
+.forecast{
+  flex{
+    flex-direction: column;
   }
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 160px;
 
   .daily-item {
-    background-color: #f5f5f5;
+    background-color: #333;
+    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+    color: #fff;
     border-radius: 15px;
-    height: 40px;
+    height: 50px;
     margin: 5px;
     align-items: center;
     cursor: pointer;
     display: flex;
     font-size: 14px;
     padding: 5px 20px;
-  }
 
-  .icon-small {
-    width: 40px;
-  }
+    .bi{
+      color: yellow;
+    }
 
-  .daily-item .day {
-    cursor: inherit;
-    color: #212121;
-    flex: 1 1;
-    font-weight: 600;
-    margin-left: 15px;
-  }
+    .icon-small {
+      width: 40px;
+    }
 
-  .description {
-    cursor: inherit;
-    flex: 1 1;
-    margin-right: 15px;
-    text-align: right;
-  }
+    .day {
+      cursor: inherit;
+      color: #fff;
+      flex: 1 1;
+      font-weight: 600;
+      margin-left: 15px;
+    }
 
-  .min-max {
-    color: #757575;
+    .description {
+      cursor: inherit;
+      flex: 1 1;
+      margin-right: 15px;
+      text-align: right;
+    }
+
+    .min-max {
+      color: #757575;
+    }
   }
 
   .daily-details-grid {
@@ -48,19 +61,19 @@
     grid-template-columns: auto auto;
     padding: 5px 15px;
     row-gap: 0;
-  }
 
-  .daily-details-grid-item {
-    align-items: center;
-    display: flex;
-    height: 30px;
-    justify-content: space-between;
-  }
+    .item {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
 
-  .daily-details-grid-item label:first-child {
-    color: #757575;
-  }
+    .item label:first-child {
+      color: #fff;
+    }
 
-  .daily-details-grid-item label:last-child {
-    color: #212121;
+    .item label:last-child {
+      color: #757575;
+    }
   }
+}

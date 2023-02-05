@@ -4,6 +4,7 @@ import { WEATHER_API_URL, WEATHER_API_KEY } from "./components/utilities/api";
 import CurrentWeather from "./components/current-weather/CurrentWeather";
 import Forecast from "./components/forecast/Forecast";
 import Navbar from "./components/menu/Navbar"
+import Search from './components/menu/Search';
 import "./scss/custom.scss"
 
 function App() {
@@ -35,9 +36,12 @@ function App() {
   return (
     <div className={`app ${mode ? 'bg-gradient':'bg-gradient'}`} style={mode ? { backgroundColor: '#212529'  } : {backgroundColor: '#ced4da'}}>
       <BrowserRouter>
-        <Navbar mode = {mode} isDark = {isDark} onSearchChange={handleOnSearchChange}/>
-        {currentWeather && <CurrentWeather data={currentWeather} />}
-        {forecast && <Forecast data={forecast} />}
+        <Navbar mode = {mode} isDark = {isDark}/>
+        <Search mode = {mode} isDark = {isDark} onSearchChange={handleOnSearchChange}/>
+        <div className='d-flex full-weather'>
+          {currentWeather && <CurrentWeather data={currentWeather} />}
+          {forecast && <Forecast data={forecast} />}
+        </div>
       </BrowserRouter>
     </div>
   );

@@ -1,69 +1,97 @@
-.weather {
-    width: 300px;
+@import "../../scss/custom.scss";
+
+.weather{
+  width: 100%;
+  height: 100%;
+  padding-top: 240px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  .curr {
+    width: 400px;
     border-radius: 6px;
     box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
     color: #fff;
     background-color: #333;
-    margin: 20px auto 0 auto;
-    padding: 0 20px 20px 20px;
-  }
+    padding: 20px;
 
-  .top,
-  .bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  .city {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1;
-    margin: 0;
-    letter-spacing: 1px;
-  }
+      .city {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1;
+        margin: 0;
+        letter-spacing: 1px;
+      }
 
-  .weather-description {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1;
-    margin: 0;
-  }
+      .date {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1;
+        margin: 0;
+        padding-top: 12px;
+      }
 
-  .weather-icon {
-    width: 100px;
-  }
+      .weather-description {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1;
+        margin: 0;
+        padding-top: 8px;
+      }
 
-  .temperature {
-    font-weight: 600;
-    font-size: 70px;
-    width: auto;
-    letter-spacing: -5px;
-    margin: 10px 0;
-  }
+      .weather-icon {
+        width: 100px;
+      }
 
-  .details {
-    width: 100%;
-    padding-left: 20px;
-  }
+      .bi{
+          color: yellow;
+      }
+    }
 
-  .parameter-row {
-    display: flex;
-    justify-content: space-between;
-  }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  .parameter-label {
-    text-align: left;
-    font-weight: 400;
-    font-size: 12px;
-  }
+      .temperature {
+        font-weight: 600;
+        font-size: 70px;
+        width: auto;
+        letter-spacing: -5px;
+        margin: 10px 0;
+      }
 
-  .parameter-value {
-    text-align: right;
-    font-weight: 600;
-    font-size: 12px;
-  }
+      .details {
+        width: 100%;
+        padding-left: 20px;
 
-  .parameter-label.top {
-    border-bottom: 1px solid #fff;
+        .parameter-row {
+          display: flex;
+          justify-content: space-between;
+
+          .parameter-label {
+            text-align: left;
+            font-weight: 400;
+            font-size: 12px;
+
+            .top {
+              border-bottom: 1px solid #fff;
+            }
+          }
+
+          .parameter-value {
+            text-align: right;
+            font-weight: 600;
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
+}
