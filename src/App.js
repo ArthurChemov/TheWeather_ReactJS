@@ -36,7 +36,7 @@ function App() {
   return (
     <section className={`app ${mode ? 'bg-gradient':'bg-gradient'}`} style={mode ? { backgroundColor: '#212529'  } : {backgroundColor: '#ced4da'}}>
       <Navbar mode = {mode} isDark = {isDark}/>
-      <Search mode = {mode} isDark = {isDark} onSearchChange={handleOnSearchChange}/>
+      <Search onSearchChange={handleOnSearchChange}/>
       <Media query="screen and (max-width: 900px)" render={() =>
           (
             <div className='d-flex flex-column full-weather'>

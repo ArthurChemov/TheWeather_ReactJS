@@ -1,6 +1,7 @@
 import React from "react";
 import "./CurrentWeather.scss";
 import { useDate } from '../utilities/useDate';
+import WeatherIcon from "../utilities/WeatherIcon";
 
 const CurrentWeather = ({ data }) => {
 
@@ -14,16 +15,7 @@ const CurrentWeather = ({ data }) => {
             <p className="date">{useDate().date.toUpperCase()} {useDate().time.toUpperCase()}</p>
             <p className="weather-description">{data.weather[0].description.toUpperCase()}</p>
           </div>
-          <i className="bi bi-brightness-high-fill"></i>
-          {/* <img
-            alt="weather"
-            className="weather-icon"
-            src={icon}
-            // src={`../../assets/icons/${data.weather[0].icon}.png`}
-          /> */}
-          {/* <div className="icon">
-            <i className="bi bi-brightness-high"></i>
-          </div> */}
+          {data.weather[0].icon && <WeatherIcon svgdata={data.weather[0].icon}/>}
         </div>
         <div className="bottom">
           <p className="temperature">{Math.round(data.main.temp)}°C</p>
