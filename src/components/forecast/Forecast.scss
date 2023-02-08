@@ -6,7 +6,7 @@
 
   @media screen and (min-width: 0px) {
     padding-top: 50px;
-    padding-left: 30px;
+    padding-left: 50px;
   }
 
   @media screen and (min-width: 460px) {
@@ -39,10 +39,6 @@
     @media screen and (min-width: 0px) {
       width: 80%;
       font-size: 10px;
-    }
-
-    @media screen and (min-width: 360px) {
-      width: 75%;
     }
 
     @media screen and (min-width: 900px) {
@@ -86,12 +82,8 @@
       justify-content: space-between;
 
       @media screen and (min-width: 0px) {
-        width: 60%;
+        width: 65%;
         font-size: 10px;
-      }
-
-      @media screen and (min-width: 360px) {
-        width: 50%;
       }
 
       @media screen and (min-width: 900px) {
