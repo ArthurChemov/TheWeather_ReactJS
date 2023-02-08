@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "//arthurchemov.github.io/TheWeather_ReactJS/static/css/main.8b979b3e.css",
+    "main.css": "//arthurchemov.github.io/TheWeather_ReactJS/static/css/main.d0527a38.css",
     "main.js": "//arthurchemov.github.io/TheWeather_ReactJS/static/js/main.b48ab9b7.js",
     "static/media/bootstrap-icons.woff?": "//arthurchemov.github.io/TheWeather_ReactJS/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "//arthurchemov.github.io/TheWeather_ReactJS/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
@@ -24,11 +24,11 @@
     "static/media/01n.svg": "//arthurchemov.github.io/TheWeather_ReactJS/static/media/01n.35d2d7e81aaa60a015557dd9a085b70a.svg",
     "static/media/01d.svg": "//arthurchemov.github.io/TheWeather_ReactJS/static/media/01d.f1148f358aa1e13bee23b6cf1b54bac7.svg",
     "index.html": "//arthurchemov.github.io/TheWeather_ReactJS/index.html",
-    "main.8b979b3e.css.map": "//arthurchemov.github.io/TheWeather_ReactJS/static/css/main.8b979b3e.css.map",
+    "main.d0527a38.css.map": "//arthurchemov.github.io/TheWeather_ReactJS/static/css/main.d0527a38.css.map",
     "main.b48ab9b7.js.map": "//arthurchemov.github.io/TheWeather_ReactJS/static/js/main.b48ab9b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b979b3e.css",
+    "static/css/main.d0527a38.css",
     "static/js/main.b48ab9b7.js"
   ]
 }
