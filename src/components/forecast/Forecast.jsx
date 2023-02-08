@@ -23,7 +23,6 @@ const Forecast = ({ data }) => {
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className="daily-item">
-                  {console.log(item.weather[0])}
                   {item.weather[0].icon && <WeatherIcon svgdata={item.weather[0].icon}/>}
                   <label className="day">{forecastDays[idx]}</label>
                   <label className="description">{item.weather[0].description}</label>
